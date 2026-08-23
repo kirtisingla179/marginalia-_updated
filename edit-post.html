@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Post — Marginalia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <span>📚 Fall Semester Edition — new stories every week</span>
+    <span class="topbar__links"><a href="index.html#stories">Read now</a><span class="dot">·</span><a href="dashboard.html">My dashboard</a></span>
+  </div>
+</div>
+
+<header class="masthead" id="top">
+  <div class="wrap masthead__inner">
+    <a href="dashboard.html" class="logo">
+      <span class="logo__mark">M</span>
+      <span class="logo__text">Marginalia</span>
+    </a>
+
+    <label class="theme-switch" aria-label="Toggle dark mode">
+      <input type="checkbox" class="theme-check">
+      <span class="theme-switch__icon">&#9728;</span>
+      <span class="theme-switch__track"><span class="theme-switch__thumb"></span></span>
+      <span class="theme-switch__icon">&#127769;</span>
+    </label>
+
+    <input type="checkbox" class="nav-check" id="navCheck">
+    <label class="nav__toggle" for="navCheck" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <div class="nav__drawer-head">
+        <a href="dashboard.html" class="logo nav__drawer-logo">
+          <span class="logo__mark">M</span>
+          <span class="logo__text">Marginalia</span>
+        </a>
+        <label class="nav__close" for="navCheck" aria-label="Close menu">&#10005;</label>
+      </div>
+
+      <div class="nav__user">
+        <span class="nav__user-avatar">K</span>
+        <div>
+          <span class="nav__user-name" style="display:block;">Kirti</span>
+          <span class="nav__user-role">Student Writer</span>
+        </div>
+      </div>
+
+      <a href="dashboard.html">My Dashboard</a>
+      <a href="write-post.html">Write a New Post</a>
+      <a href="index.html#stories">Browse Marginalia</a>
+      <div class="nav__actions-mobile">
+        <a href="login.html" class="link-btn">Log out</a>
+      </div>
+    </nav>
+    <label class="nav-scrim" for="navCheck" aria-hidden="true"></label>
+
+    <div class="masthead__actions">
+      <a href="write-post.html" class="link-btn">+ New Post</a>
+      <a href="login.html" class="btn btn--small">Log out</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">Editing</p>
+    <h1>Edit your post</h1>
+    <p>Update the content below, then republish or save your changes as a draft.</p>
+  </div>
+</section>
+
+<section class="editor">
+  <div class="wrap">
+    <div class="editor__card">
+      <form>
+        <div class="editor__field">
+          <label for="etitle">Title</label>
+          <input type="text" id="etitle" value="Three poems about the campus dining hall at midnight" required>
+        </div>
+
+        <div class="editor__field">
+          <label for="ecategory">Category</label>
+          <select id="ecategory">
+            <option>Campus Life</option>
+            <option selected>Poetry Corner</option>
+            <option>Study Tips</option>
+            <option>Internships</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="editor__field">
+          <label for="ecover">Cover image URL</label>
+          <input type="url" id="ecover" value="https://images.unsplash.com/photo-1775229106888-dca42d0c9f4f">
+        </div>
+
+        <div class="editor__field">
+          <label for="econtent">Content</label>
+          <textarea id="econtent" rows="12" required>A short collection on fluorescent light, instant noodles, and the strange peace of an empty dining hall after everyone else has gone to sleep.
+
+I.
+The trays stack themselves at midnight,
+patient, chrome, half-dreaming
+of the hands that will lift them again at seven.
+
+II.
+Nobody tells you the dining hall is quietest
+exactly when you need it loudest —
+one bowl, one spoon, one long fluorescent hum.</textarea>
+        </div>
+
+        <div class="editor__field">
+          <label>Who can read this</label>
+          <div class="audience-toggle">
+            <label>
+              <input type="radio" name="audience">
+              <span>Public<small>Anyone on Marginalia can find and read this post.</small></span>
+            </label>
+            <label>
+              <input type="radio" name="audience" checked>
+              <span>Friends only<small>Only people you've added as friends can see this post — everyone else won't find it.</small></span>
+            </label>
+            <label>
+              <input type="radio" name="audience">
+              <span>Only me<small>Private — saved to your dashboard, visible to no one but you.</small></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="editor__actions">
+          <a href="dashboard.html" class="btn btn--ghost btn--full">Save changes</a>
+          <a href="dashboard.html" class="btn btn--full">Republish</a>
+        </div>
+      </form>
+      <p class="auth__foot"><a href="dashboard.html" style="color:var(--maroon-600);">Delete this post</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <span class="logo__mark">M</span>
+        <span class="logo__text">Marginalia</span>
+      </a>
+      <p>A blog platform for the notes you scribble between classes.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="study-tips.html">Study Tips</a>
+      <a href="internships.html">Internships</a>
+      <a href="poetry-corner.html">Poetry Corner</a>
+    </div>
+    <div class="footer__col">
+      <h4>Platform</h4>
+      <a href="dashboard.html">My Dashboard</a>
+      <a href="write-post.html">Write a Post</a>
+      <a href="#">For campus clubs</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© 2026 Marginalia. Written between lectures.</p>
+    <a href="#top" class="back-to-top">Back to top &#8593;</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priya Nair — Marginalia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <span>📚 Fall Semester Edition — new stories every week</span>
+    <span class="topbar__links"><a href="index.html#stories">Read now</a><span class="dot">·</span><a href="dashboard.html">My dashboard</a></span>
+  </div>
+</div>
+
+<header class="masthead" id="top">
+  <div class="wrap masthead__inner">
+    <a href="dashboard.html" class="logo">
+      <span class="logo__mark">M</span>
+      <span class="logo__text">Marginalia</span>
+    </a>
+
+    <label class="theme-switch" aria-label="Toggle dark mode">
+      <input type="checkbox" class="theme-check">
+      <span class="theme-switch__icon">&#9728;</span>
+      <span class="theme-switch__track"><span class="theme-switch__thumb"></span></span>
+      <span class="theme-switch__icon">&#127769;</span>
+    </label>
+
+    <input type="checkbox" class="nav-check" id="navCheck">
+    <label class="nav__toggle" for="navCheck" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <div class="nav__drawer-head">
+        <a href="dashboard.html" class="logo nav__drawer-logo">
+          <span class="logo__mark">M</span>
+          <span class="logo__text">Marginalia</span>
+        </a>
+        <label class="nav__close" for="navCheck" aria-label="Close menu">&#10005;</label>
+      </div>
+
+      <div class="nav__user">
+        <span class="nav__user-avatar">K</span>
+        <div>
+          <span class="nav__user-name" style="display:block;">Kirti</span>
+          <span class="nav__user-role">Student Writer</span>
+        </div>
+      </div>
+
+      <a href="dashboard.html">My Dashboard</a>
+      <a href="write-post.html">Write a New Post</a>
+      <a href="index.html#stories">Browse Marginalia</a>
+      <div class="nav__actions-mobile">
+        <a href="login.html" class="link-btn">Log out</a>
+      </div>
+    </nav>
+    <label class="nav-scrim" for="navCheck" aria-hidden="true"></label>
+
+    <div class="masthead__actions">
+      <a href="write-post.html" class="link-btn">+ New Post</a>
+      <a href="login.html" class="btn btn--small">Log out</a>
+    </div>
+  </div>
+</header>
+
+<section class="category-page">
+  <div class="wrap" style="max-width:900px;">
+
+    <div class="profile-header">
+      <span class="profile-avatar">P</span>
+      <div>
+        <h1 class="profile-name">Priya Nair</h1>
+        <p class="profile-role">English &amp; Journalism, Class of &apos;26</p>
+        <p class="profile-bio">Writes about the small, specific moments of college that nobody warns you about — graduation, deadlines, and everything in between. Currently procrastinating on a thesis chapter.</p>
+        <div class="profile-stats">
+          <div><strong>9</strong><span>Posts</span></div>
+          <div><strong>1,240</strong><span>Followers</span></div>
+          <div><strong>34,600</strong><span>Total Reads</span></div>
+        </div>
+        <a href="#" class="btn btn--small" style="margin-top:6px;">+ Add as Friend</a>
+        <p class="editor__hint" style="margin-top:10px; max-width:44ch;">Everyone can already see Priya's public posts below — no need to add her for those. Adding her as a friend just unlocks anything she's marked "Friends only."</p>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-bottom:24px;">
+      <p class="eyebrow">Published</p>
+      <h2>Priya's posts</h2>
+    </div>
+
+    <div class="stories__grid">
+
+      <article class="card card--feature">
+        <div class="card__image" style="background-image:url('https://images.unsplash.com/photo-1729799959058-bda08177a84c?auto=format&fit=crop&w=1200&q=80');">
+          <span class="category category--gold">Graduation</span>
+        </div>
+        <div class="card__body">
+          <h3>What nobody tells you about the walk across the stage</h3>
+          <p>Four years condensed into ninety seconds — a senior looks back at the classes, the crises, and the friends who made it worth it.</p>
+          <div class="byline"><span class="byline__avatar">P</span><span>Priya Nair</span><span class="dot">·</span><span class="mono">May 14</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__image" style="background-image:url('https://images.unsplash.com/photo-1676278746065-487aa8848410?auto=format&fit=crop&w=800&q=80');">
+          <span class="category category--cream">Campus Life</span>
+        </div>
+        <div class="card__body">
+          <h3>Everything I packed for freshman year that I never touched</h3>
+          <p>A confession, and a slightly better packing list for the next person.</p>
+          <div class="byline"><span class="byline__avatar">P</span><span>Priya Nair</span><span class="dot">·</span><span class="mono">Apr 2</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__image" style="background-image:url('https://images.unsplash.com/photo-1754607812143-12d421b1db11?auto=format&fit=crop&w=800&q=80');">
+          <span class="category">Study Tips</span>
+        </div>
+        <div class="card__body">
+          <h3>How I stopped rewriting the same essay intro for three hours</h3>
+          <p>A very specific kind of procrastination, and the one trick that finally broke it.</p>
+          <div class="byline"><span class="byline__avatar">P</span><span>Priya Nair</span><span class="dot">·</span><span class="mono">Mar 20</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__image" style="background-image:url('https://images.unsplash.com/photo-1643148636630-0b0fb138fc74?auto=format&fit=crop&w=800&q=80');">
+          <span class="category">Internships</span>
+        </div>
+        <div class="card__body">
+          <h3>The cover letter I almost didn't send</h3>
+          <p>On rejection, rewriting, and the offer that came from the application I nearly deleted.</p>
+          <div class="byline"><span class="byline__avatar">P</span><span>Priya Nair</span><span class="dot">·</span><span class="mono">Mar 4</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <span class="logo__mark">M</span>
+        <span class="logo__text">Marginalia</span>
+      </a>
+      <p>A blog platform for the notes you scribble between classes.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="study-tips.html">Study Tips</a>
+      <a href="internships.html">Internships</a>
+      <a href="poetry-corner.html">Poetry Corner</a>
+    </div>
+    <div class="footer__col">
+      <h4>Platform</h4>
+      <a href="dashboard.html">My Dashboard</a>
+      <a href="write-post.html">Write a Post</a>
+      <a href="#">For campus clubs</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© 2026 Marginalia. Written between lectures.</p>
+    <a href="#top" class="back-to-top">Back to top &#8593;</a>
+  </div>
+</footer>
+
+</body>
+</html>

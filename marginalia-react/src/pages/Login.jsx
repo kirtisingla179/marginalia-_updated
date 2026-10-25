@@ -16,14 +16,19 @@ export default function Login() {
 
   if (user) return <Navigate to="/dashboard" replace />
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
     const found = validateLogin(values)
     setErrors(found)
     if (Object.keys(found).length) return
-    const result = login(values.email, values.password)
-    if (!result.ok) return setBanner({ type: 'error', text: result.error })
-    navigate(location.state?.from ?? '/dashboard', { replace: true })
+
+    setBanner(null)
+    try {
+      await login(values.email, values.password) // waits for the Promise
+      navigate(location.state?.from ?? '/dashboard', { replace: true })
+    } catch (err) {
+      setBanner({ type: 'error', text: err.message }) // Promise was rejected
+    }
   }
 
   return (

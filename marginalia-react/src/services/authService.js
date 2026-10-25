@@ -25,30 +25,36 @@ export function getCurrentUser() {
   return user ? publicUser(user) : null
 }
 
+// Resolves with the user, or rejects with an Error (wrong credentials).
 export function login(email, password) {
-  const user = readUsers().find(
-    (u) => u.email.toLowerCase() === email.trim().toLowerCase() && u.password === password,
-  )
-  if (!user) return { ok: false, error: 'Email or password is incorrect.' }
-  localStorage.setItem(SESSION_KEY, user.id)
-  return { ok: true, user: publicUser(user) }
+  return new Promise((resolve, reject) => {
+    const user = readUsers().find(
+      (u) => u.email.toLowerCase() === email.trim().toLowerCase() && u.password === password,
+    )
+    if (!user) return reject(new Error('Email or password is incorrect.'))
+    localStorage.setItem(SESSION_KEY, user.id)
+    resolve(publicUser(user))
+  })
 }
 
+// Resolves with the new user, or rejects if the email is already registered.
 export function signup({ name, email, password }) {
-  const users = readUsers()
-  if (users.some((u) => u.email.toLowerCase() === email.trim().toLowerCase())) {
-    return { ok: false, error: 'An account with this email already exists. Try logging in.' }
-  }
-  const user = {
-    id: `u_${Date.now().toString(36)}`,
-    name: name.trim(),
-    email: email.trim(),
-    password,
-    role: 'Student Writer',
-  }
-  writeUsers([...users, user])
-  localStorage.setItem(SESSION_KEY, user.id)
-  return { ok: true, user: publicUser(user) }
+  return new Promise((resolve, reject) => {
+    const users = readUsers()
+    if (users.some((u) => u.email.toLowerCase() === email.trim().toLowerCase())) {
+      return reject(new Error('An account with this email already exists. Try logging in.'))
+    }
+    const user = {
+      id: `u_${Date.now().toString(36)}`,
+      name: name.trim(),
+      email: email.trim(),
+      password,
+      role: 'Student Writer',
+    }
+    writeUsers([...users, user])
+    localStorage.setItem(SESSION_KEY, user.id)
+    resolve(publicUser(user))
+  })
 }
 
 export function logout() {

@@ -6,16 +6,17 @@ const AuthContext = createContext(null)
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => authService.getCurrentUser())
 
-  const login = useCallback((email, password) => {
-    const result = authService.login(email, password)
-    if (result.ok) setUser(result.user)
-    return result
+  // Both return a Promise; a rejected Promise (bad login etc.) is handled by the caller.
+  const login = useCallback(async (email, password) => {
+    const loggedIn = await authService.login(email, password)
+    setUser(loggedIn)
+    return loggedIn
   }, [])
 
-  const signup = useCallback((details) => {
-    const result = authService.signup(details)
-    if (result.ok) setUser(result.user)
-    return result
+  const signup = useCallback(async (details) => {
+    const created = await authService.signup(details)
+    setUser(created)
+    return created
   }, [])
 
   const logout = useCallback(() => {

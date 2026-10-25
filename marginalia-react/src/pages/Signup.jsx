@@ -15,14 +15,19 @@ export default function Signup() {
 
   if (user) return <Navigate to="/dashboard" replace />
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
     const found = validateSignup(values)
     setErrors(found)
     if (Object.keys(found).length) return
-    const result = signup({ name: values.name, email: values.email, password: values.password })
-    if (!result.ok) return setBanner({ type: 'error', text: result.error })
-    navigate('/dashboard', { replace: true })
+
+    setBanner(null)
+    try {
+      await signup({ name: values.name, email: values.email, password: values.password })
+      navigate('/dashboard', { replace: true })
+    } catch (err) {
+      setBanner({ type: 'error', text: err.message })
+    }
   }
 
   return (

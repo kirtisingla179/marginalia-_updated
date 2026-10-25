@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Marginalia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <span>📚 Fall Semester Edition — new stories every week</span>
+    <span class="topbar__links"><a href="index.html#join">Write for us</a><span class="dot">·</span><a href="index.html#stories">Read now</a></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a href="index.html" class="logo">
+      <span class="logo__mark">M</span>
+      <span class="logo__text">Marginalia</span>
+    </a>
+
+    <label class="theme-switch" aria-label="Toggle dark mode">
+      <input type="checkbox" class="theme-check">
+      <span class="theme-switch__icon">&#9728;</span>
+      <span class="theme-switch__track"><span class="theme-switch__thumb"></span></span>
+      <span class="theme-switch__icon">&#127769;</span>
+    </label>
+
+    <input type="checkbox" class="nav-check" id="navCheck">
+    <label class="nav__toggle" for="navCheck" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <div class="nav__drawer-head">
+        <a href="index.html" class="logo nav__drawer-logo">
+          <span class="logo__mark">M</span>
+          <span class="logo__text">Marginalia</span>
+        </a>
+        <span class="nav__drawer-search" aria-hidden="true">&#128269;</span>
+        <label class="nav__close" for="navCheck" aria-label="Close menu">&#10005;</label>
+      </div>
+      <div class="nav__dropdown">
+        <input type="checkbox" class="explore-check" id="exploreCheck">
+        <label class="nav__dropdown-btn" for="exploreCheck">Explore <span class="caret">&#9662;</span></label>
+        <div class="nav__dropdown-menu" id="exploreMenu">
+          <a href="campus-life.html">Campus Life</a>
+          <a href="study-tips.html">Study Tips</a>
+          <a href="internships.html">Internships</a>
+          <a href="poetry-corner.html">Poetry Corner</a>
+        </div>
+      </div>
+      <a href="index.html#why">Why Marginalia</a>
+      <a href="index.html#gallery">Campus</a>
+      <a href="index.html#voices">Voices</a>
+      <a href="index.html#faq">FAQ</a>
+      <div class="nav__actions-mobile">
+        <a href="login.html" class="link-btn">Log in</a>
+        <a href="signup.html" class="btn btn--small">Start writing</a>
+      </div>
+    </nav>
+    <label class="nav-scrim" for="navCheck" aria-hidden="true"></label>
+
+    <div class="masthead__actions">
+      <a href="login.html" class="link-btn">Log in</a>
+      <a href="signup.html" class="btn btn--small">Start writing</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">Our story</p>
+    <h1>About</h1>
+    <p>A blog platform built by students, for students.</p>
+  </div>
+</section>
+
+<section class="category-page">
+  <div class="wrap" style="max-width:760px;">
+    <div class="why__card" style="background:var(--white); border:1px solid var(--cream-dark); margin-bottom:20px;">
+      <h3 style="color:var(--maroon-800); margin-bottom:12px;">Why we started Marginalia</h3>
+      <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:14px;">Marginalia began as a class project between two roommates who were tired of writing essays that only one professor would ever read. We wanted a place where the funny voice memo you left yourself at 1am, or the recipe you perfected in a dorm kitchen, could become something other students actually find and enjoy.</p>
+      <p style="color:var(--ink-soft); font-size:0.95rem;">Today, writers on 340 campuses use Marginalia to publish essays, poetry, study guides, and everything in between — for free, forever, with no ads and no algorithm deciding what gets seen.</p>
+    </div>
+    <div class="why__card" style="background:var(--white); border:1px solid var(--cream-dark);">
+      <h3 style="color:var(--maroon-800); margin-bottom:12px;">What we believe</h3>
+      <p style="color:var(--ink-soft); font-size:0.95rem;">Good writing doesn't need a huge audience to matter. It needs the right one. That's what we're building — a home for the stories that live in the margins of a real semester.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--footer">
+        <span class="logo__mark">M</span>
+        <span class="logo__text">Marginalia</span>
+      </a>
+      <p>A blog platform for the notes you scribble between classes.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <a href="campus-life.html">Campus Life</a>
+      <a href="study-tips.html">Study Tips</a>
+      <a href="internships.html">Internships</a>
+      <a href="poetry-corner.html">Poetry Corner</a>
+    </div>
+    <div class="footer__col">
+      <h4>Platform</h4>
+      <a href="signup.html">Start writing</a>
+      <a href="dashboard.html">My Dashboard</a>
+      <a href="#">Writer guidelines</a>
+      <a href="#">For campus clubs</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© 2026 Marginalia. Written between lectures.</p>
+    <a href="#top" class="back-to-top">Back to top &#8593;</a>
+  </div>
+</footer>
+
+</body>
+</html>
